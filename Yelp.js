@@ -15,13 +15,13 @@ const Yelp = {
     search(term,location,sortBy){
           return Yelp.getAccessToken().then(()=>{
           	return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`,{
-          		headers: {`Bearer ${accessToken}`}
+          		headers: {Authorization: `Bearer ${accessToken}`}
           	})
           }).then(jsonResponse=>{
           	if (jsonResponse.businesses) {
                 return jsonResponse.businesses.map(business=>{
                 		return {
-                			id: business.id,
+                			      id: business.id,
                             imageSrc: business.image_url,
                             name: business.name,
                             address: business.address,
