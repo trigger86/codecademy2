@@ -1,5 +1,5 @@
-const clientId = '7avScoUTuqK-e1qpmaQWQw';
-const secret = 'N2f1QjrvmWHjenklS8ixXB9oqblq4CisFpBCFgHZlcko3bFDhAkhdHAXKgiGo37Y';
+const clientId = '';
+const secret = '';
 let accessToken;
 const Yelp = {
 
